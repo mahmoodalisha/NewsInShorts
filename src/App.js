@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import NewsFeed from './components/NewsFeed';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [category, setCategory] = useState('general');
+
+    const handleCategoryChange = (newCategory) => {
+        setCategory(newCategory);
+    };
+
+    return (
+        <div className="App">
+            <div className="navbar">
+                <h1>Welcome to My News Homepage</h1>
+                <div className="category-buttons">
+                    <button onClick={() => handleCategoryChange('general')}>General</button>
+                    <button onClick={() => handleCategoryChange('business')}>Business</button>
+                    <button onClick={() => handleCategoryChange('technology')}>Technology</button>
+                    <button onClick={() => handleCategoryChange('sports')}>Sports</button>
+                    <button onClick={() => handleCategoryChange('entertainment')}>Entertainment</button>
+                </div>
+            </div>
+            <main>
+                <NewsFeed category={category} />
+            </main>
+        </div>
+    );
+};
 
 export default App;
