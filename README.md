@@ -23,7 +23,7 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/mahmoodalisha/urban-lodging.git
+git clone https://github.com/mahmoodalisha/NewsInShorts.git
 Navigate to the Project Directory
 
 bash
