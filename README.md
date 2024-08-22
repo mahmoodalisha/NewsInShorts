@@ -21,8 +21,7 @@ API: NewsAPI (for fetching news articles)
 Setup
 Clone the Repository
 
-bash
-Copy code
+
 git clone https://github.com/mahmoodalisha/NewsInShorts.git
 Navigate to the Project Directory
 
@@ -32,7 +31,7 @@ Configure API Key
 Replace YOUR_API_KEY in the NewsFeed.js file with your actual NewsAPI key.
 
 javascript
-Copy code
+
 const response = await axios.get(
     `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=YOUR_API_KEY`
 );
