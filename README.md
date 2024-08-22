@@ -26,14 +26,7 @@ Copy code
 git clone https://github.com/mahmoodalisha/NewsInShorts.git
 Navigate to the Project Directory
 
-bash
-Copy code
-cd urban-lodging
-Install Dependencies
 
-bash
-Copy code
-npm install
 Configure API Key
 
 Replace YOUR_API_KEY in the NewsFeed.js file with your actual NewsAPI key.
@@ -45,8 +38,7 @@ const response = await axios.get(
 );
 Run the Application
 
-bash
-Copy code
+
 npm start
 The application will start and be accessible at http://localhost:3000.
 
