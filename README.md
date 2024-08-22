@@ -1,6 +1,4 @@
-News Homepage
-Description
-News Homepage is a React application that fetches and displays the latest news from various categories. Users can view news articles categorized into General, Business, Technology, Sports, and Entertainment. The application features a stylish navbar with category buttons and a news feed that updates based on the selected category.
+My React application that fetches and displays the latest news from various categories. Users can view news articles categorized into General, Business, Technology, Sports, and Entertainment. The application features a stylish navbar with category buttons and a news feed that updates based on the selected category.
 
 
 
