@@ -13,7 +13,7 @@ const NewsFeed = ({ category }) => {
             setError(null);
             try {
                 const response = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=53bf789e54e841ae90cfe904b8c87c2d`
+                    `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
                 );
                 setNews(response.data.articles);
             } catch (err) {
