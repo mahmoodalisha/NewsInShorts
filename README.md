@@ -30,7 +30,7 @@ Configure API Key
 
 Replace YOUR_API_KEY in the NewsFeed.js file with your actual NewsAPI key.
 
-javascript
+
 
 const response = await axios.get(
     `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=YOUR_API_KEY`
