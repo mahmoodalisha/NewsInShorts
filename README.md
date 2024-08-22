@@ -53,24 +53,8 @@ The application will start and be accessible at http://localhost:3000.
 Usage
 Navbar: Use the category buttons to filter news articles by category.
 News Feed: View the latest headlines and details for the selected category.
-Project Structure
-php
-Copy code
-urban-lodging/
-│
-├── src/
-│   ├── components/
-│   │   └── NewsFeed.js       # Component for fetching and displaying news
-│   ├── App.js                 # Main application component
-│   ├── App.css                # Styling for the application
-│   └── index.js               # Entry point for React application
-│
-├── public/
-│   └── index.html             # HTML template
-│
-├── .gitignore                 # Git ignore file
-├── package.json               # Project dependencies and scripts
-└── README.md                  # Project documentation
+
+
 Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request with your proposed changes.
 
