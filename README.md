@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+News Homepage
+Description
+News Homepage is a React application that fetches and displays the latest news from various categories. Users can view news articles categorized into General, Business, Technology, Sports, and Entertainment. The application features a stylish navbar with category buttons and a news feed that updates based on the selected category.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![Screenshot 2024-08-23 023502](https://github.com/user-attachments/assets/dfe44285-3045-4ad0-8174-b2af153a7a98)
 
-### `npm start`
+![Screenshot 2024-08-23 023517](https://github.com/user-attachments/assets/27d3a40c-d595-4b9f-9ff8-6ee6d896d64c)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+![Screenshot 2024-08-23 023537](https://github.com/user-attachments/assets/c477b8a3-5ae6-460a-bdf6-7d3b663ed0c8)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Category-wise News: Fetch and display news articles from different categories.
+Responsive Design: Modern and attractive user interface with a deep blue navbar and styled buttons.
+Latest News: Retrieves and shows the latest headlines from NewsAPI.
+Technologies Used
+Frontend: React.js
+Styling: CSS
+API: NewsAPI (for fetching news articles)
+Setup
+Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+git clone https://github.com/mahmoodalisha/urban-lodging.git
+Navigate to the Project Directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+cd urban-lodging
+Install Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copy code
+npm install
+Configure API Key
 
-### `npm run eject`
+Replace YOUR_API_KEY in the NewsFeed.js file with your actual NewsAPI key.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+javascript
+Copy code
+const response = await axios.get(
+    `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=YOUR_API_KEY`
+);
+Run the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+npm start
+The application will start and be accessible at http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
+Navbar: Use the category buttons to filter news articles by category.
+News Feed: View the latest headlines and details for the selected category.
+Project Structure
+php
+Copy code
+urban-lodging/
+│
+├── src/
+│   ├── components/
+│   │   └── NewsFeed.js       # Component for fetching and displaying news
+│   ├── App.js                 # Main application component
+│   ├── App.css                # Styling for the application
+│   └── index.js               # Entry point for React application
+│
+├── public/
+│   └── index.html             # HTML template
+│
+├── .gitignore                 # Git ignore file
+├── package.json               # Project dependencies and scripts
+└── README.md                  # Project documentation
+Contributing
+If you'd like to contribute to this project, please fork the repository and submit a pull request with your proposed changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+For any inquiries, please contact Alisha.
