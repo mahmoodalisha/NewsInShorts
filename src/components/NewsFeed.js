@@ -12,8 +12,9 @@ const NewsFeed = ({ category }) => {
             setLoading(true);
             setError(null);
             try {
+                const apiKey = process.env.REACT_APP_GNEWS_API_KEY;
                 const response = await axios.get(
-                    `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=5&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+                    `https://gnews.io/api/v4/top-headlines?category=${category}&apikey=${apiKey}`
                 );
                 setNews(response.data.articles);
             } catch (err) {
@@ -40,7 +41,7 @@ const NewsFeed = ({ category }) => {
                         <li key={index} className="news-item">
                             <a href={article.url} target="_blank" rel="noopener noreferrer" className="news-link">
                                 <div className="news-image-container">
-                                    {article.urlToImage && <img src={article.urlToImage} alt={article.title} className="news-image" />}
+                                    {article.image && <img src={article.image} alt={article.title} className="news-image" />}
                                 </div>
                                 <div className="news-content">
                                     <h3 className="news-title">{article.title}</h3>
